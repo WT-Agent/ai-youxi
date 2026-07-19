@@ -350,7 +350,7 @@ const metricsList = [
   { key: 'clearRateImprovement', label: '通关提升度 (Improvement)' }
 ];
 
-const aiScores = ref<{ mechanicsAnalysis: number; combatFeasibility: number; numericalBalance: number; loreDepth: number; clearRateImprovement: number; } | null>(null);
+const aiScores = ref<Record<string, number> | null>(null);
 
 const styleOptions = [
   { label: '硬核高玩与极限通关流 (帧数前摇解析/连招招式避让/Min-Max极致配装)', value: '硬核高玩与极限通关流' },
@@ -368,7 +368,7 @@ interface HistoryItem {
   destination: string;
   input: string;
   styleLabel: string;
-  aiScores: { mechanicsAnalysis: number; combatFeasibility: number; numericalBalance: number; loreDepth: number; clearRateImprovement: number; } | null;
+  aiScores: Record<string, number> | null;
   output: string;
 }
 
